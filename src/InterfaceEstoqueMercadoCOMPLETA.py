@@ -190,7 +190,7 @@ def login_janela2(login_janela):
     button_cadastrar = tk.Button(frame_superior_dashboard, text="cadastrar", bg="#f2f2f2", fg="#4a4ae0", font=("Arial", 16, "bold"), bd=0, cursor="hand2", command=lambda: abrir_janela_cadastro(janela_google, produtos))
     button_cadastrar.place(relx=0.29, y=65, anchor='center')
 
-    logo = PhotoImage(file="superestoque3000.png")
+    logo = PhotoImage(file="src\superestoque3000.png")
     lbl_logo = tk.Label(frame_superior_dashboard, image=logo, bg="#f2f2f2")
     lbl_logo.image = logo  # evita que o Python limpe a imagem da memória
     lbl_logo.place(relx=0.5, y=65, anchor='center')
@@ -254,9 +254,9 @@ def login_janela2(login_janela):
 
     # Lista de produtos
     produtos = {
-    "1589082": {"nome": "Maçã", "quantidade": "30", "validade": "05/09/2025", "adicao": "05/09/2025", "fornecedor": "Super Frutas", "imagem": "maça.png"},
-    "1642547": {"nome": "Feijão", "quantidade": "50", "validade": "08/09/2025", "adicao": "08/09/2025", "fornecedor": "Alimentos BR", "imagem": "feijao.png"},
-    "3159028": {"nome": "Leite Integral", "quantidade": "20", "validade": "28/08/2025", "adicao": "28/08/2025", "fornecedor": "Laticínios Sul", "imagem": "leite.png"}
+    "1589082": {"nome": "Maçã", "quantidade": "30", "validade": "05/09/2025", "adicao": "05/09/2025", "fornecedor": "Super Frutas", "imagem": "src\maça.png"},
+    "1642547": {"nome": "Feijão", "quantidade": "50", "validade": "08/09/2025", "adicao": "08/09/2025", "fornecedor": "Alimentos BR", "imagem": "src\feijao.png"},
+    "3159028": {"nome": "Leite Integral", "quantidade": "20", "validade": "28/08/2025", "adicao": "28/08/2025", "fornecedor": "Laticínios Sul", "imagem": "src\leite.png"}
 }
     #JANELA DE CADASTRO DE PRODUTO
     def abrir_janela_cadastro(login_janela2, produtos):
