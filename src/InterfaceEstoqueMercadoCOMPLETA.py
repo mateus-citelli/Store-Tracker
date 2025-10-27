@@ -255,7 +255,7 @@ def login_janela2(login_janela):
     # Lista de produtos
     produtos = {
     "1589082": {"nome": "Maçã", "quantidade": "30", "validade": "05/09/2025", "adicao": "05/09/2025", "fornecedor": "Super Frutas", "imagem": "src\maça.png"},
-    "1642547": {"nome": "Feijão", "quantidade": "50", "validade": "08/09/2025", "adicao": "08/09/2025", "fornecedor": "Alimentos BR", "imagem": "src\feijao.png"},
+    "1642547": {"nome": "Arroz", "quantidade": "50", "validade": "08/09/2025", "adicao": "08/09/2025", "fornecedor": "Alimentos BR", "imagem": "src\Arroz.png"},
     "3159028": {"nome": "Leite Integral", "quantidade": "20", "validade": "28/08/2025", "adicao": "28/08/2025", "fornecedor": "Laticínios Sul", "imagem": "src\leite.png"}
 }
     #JANELA DE CADASTRO DE PRODUTO
