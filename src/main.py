@@ -1,6 +1,7 @@
 from tkinter import *
 import tkinter as tk
 from classes_estoque import *
+from CRUD import *
 import json
 import os
 
@@ -84,58 +85,7 @@ def login_janela2(login_janela):
     janela_google = CriarJanela(login_janela, 1920, 1080, "Splash Page", '#202124')
 
     # JANELA DE EXCLUIR PRODUTO
-    def abrir_janela_excluir():
-        janela_excluir = CriarJanela(janela_google, 900, 600, "Excluir Produto", "#5a5a5a")
-
-        tk.Label(janela_excluir, text="Exclua o produto", bg="#5a5a5a", fg="white",
-             font=("Arial", 20, "bold")).pack(pady=18)
-
-        frame_box = tk.Frame(janela_excluir, bg="#4d4d4d", padx=20, pady=20)
-        frame_box.pack(pady=10)
-
-        tk.Label(frame_box, text="", bg="#4d4d4d", width=3).grid(row=0, column=0)  # espaço para radiobutton
-        tk.Label(frame_box, text="Código de barras", bg="#4d4d4d", fg="white", font=("Arial", 12, "bold"), width=18).grid(row=0, column=1)
-        tk.Label(frame_box, text="Nome do produto", bg="#4d4d4d", fg="white", font=("Arial", 12, "bold"), width=25).grid(row=0, column=2)
-        tk.Label(frame_box, text="Data de adição", bg="#4d4d4d", fg="white", font=("Arial", 12, "bold"), width=18).grid(row=0, column=3)
-
-        selecionado = tk.StringVar(value="")  # vazio por padrão
-
-        # Usa a versão atualizada de 'produtos' (carregado do JSON)
-        lista = ListaProdutos(frame_box, produtos, selecionado)
-        lista.exibir_radiobuttonsElabels()
-
-        mensagem_excluir = tk.Label(
-            janela_excluir,
-            text="Produto excluído com sucesso!",
-            bg="#5a5a5a",
-            fg="#5a5a5a",  # invisível no início
-            font=("Arial", 12, "bold")
-            )
-        mensagem_excluir.pack(pady=(20,0), anchor="w", padx=20)
-
-        def confirmar_exclusao():
-            codigo_sel = selecionado.get()
-            if not codigo_sel:
-                mensagem_excluir.config(text="Selecione um produto para excluir.", fg="red")
-                return
-
-            if codigo_sel in produtos:
-                del produtos[codigo_sel]          # remove do dicionário em memória
-                salvar_produtos(produtos)        # salva no JSON
-                mensagem_excluir.config(text="Produto excluído com sucesso!", fg="lime")
-                selecionado.set("")
-                # Recria a janela para atualizar a lista visual
-                janela_excluir.destroy()
-                abrir_janela_excluir()
-            else:
-                mensagem_excluir.config(text="Produto não encontrado.", fg="red")
-                return
-
-        tk.Button(janela_excluir, text="EXCLUIR", bg="#ff5733", fg="white", font=("Arial", 14, "bold"),
-              cursor="hand2", command=confirmar_exclusao).place(relx=0.75, rely=0.9, anchor='center')
-
-        tk.Button(janela_excluir, text="VOLTAR", bg='#1A73E8', fg='white', font=("Arial", 12),
-              cursor="hand2", command=lambda: janela_excluir.fechar()).place(relx=0.9, rely=0.9, anchor='center')
+    RemoverProdutoWindow(janela_google, estoque, read_produto)
 
     # lista de checkboxes (os quadradinhos para o filtro)
     checkboxes = []

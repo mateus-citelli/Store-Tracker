@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
     "1000002": {
         "nome": "Batata frita",
@@ -39,4 +40,47 @@
         "fornecedor": "dasdasdas",
         "imagem": "sem_imagem.png"
     }
+=======
+{
+    "1000002": {
+        "nome": "Batata frita",
+        "quantidade": "10",
+        "validade": "21212121",
+        "adicao": "21212121",
+        "fornecedor": "Polar",
+        "imagem": "sem_imagem.png"
+    },
+    "1000003": {
+        "nome": "Pera",
+        "quantidade": "15",
+        "validade": "23082027",
+        "adicao": "31102025",
+        "fornecedor": "Horti Fruti 10",
+        "imagem": "sem_imagem.png"
+    },
+    "1000004": {
+        "nome": "Banana",
+        "quantidade": "29",
+        "validade": "31212121",
+        "adicao": "21212121",
+        "fornecedor": "AAAA",
+        "imagem": "sem_imagem.png"
+    },
+    "1000005": {
+        "nome": "EXCLUIU",
+        "quantidade": "21",
+        "validade": "21212121",
+        "adicao": "12121212",
+        "fornecedor": "aadsa",
+        "imagem": "sem_imagem.png"
+    },
+    "1000006": {
+        "nome": "dsadasdsaasd",
+        "quantidade": "dsadasdas",
+        "validade": "21212121",
+        "adicao": "21212121",
+        "fornecedor": "dasdasdas",
+        "imagem": "sem_imagem.png"
+    }
+>>>>>>> Stashed changes
 }
