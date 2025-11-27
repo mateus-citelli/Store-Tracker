@@ -5,6 +5,7 @@ import json
 import os
 # importe as classes POO que você criou em CRUD (ou nome do arquivo que você salvou)
 from CRUD import CreateProduto, ReadProduto, RemoverProdutoWindow, EditarProdutoWindow
+#Classes CreateProduto e ReadProduto criadas por Túlio, classes EditarProdutoWindow e RemoverProdutoWindow criadas por Mateus
 
 estoque = Estoque()
 
